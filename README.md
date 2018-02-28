@@ -39,7 +39,7 @@ Add a `.stylelintrc` file to the root of your project:
 ```json
 {
   "extends": [
-    "growcss"
+    "stylelint-config-growcss"
   ]
 }
 ```
