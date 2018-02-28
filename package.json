@@ -2,34 +2,47 @@
   "name": "stylelint-config-growcss",
   "version": "1.0.0",
   "description": "A mostly reasonable approach to CSS.",
+  "keywords": [
+    "css",
+    "growcss",
+    "lint",
+    "styleguide",
+    "stylelint",
+    "styled-components"
+  ],
+  "homepage": "https://growcss.com",
+  "bugs": {
+    "url": "https://github.com/growcss/stylelint-config-growcss/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Daniel Bannert",
+    "email": "d.bannert@anolilab.de"
+  },
+  "files": [
+    "index.js"
+  ],
   "main": "index.js",
-  "engines": {
-    "node": "^9.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/growcss/stylelint-config-growcss.git"
   },
   "scripts": {
     "test": "yarn run --silent tests-only",
     "tests-only": "ava ./test/*.test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/growcss/stylelint-config-growcss.git"
+  "babel": {
+    "presets": [
+      "@ava/stage-4",
+      "react"
+    ]
   },
-  "keywords": [
-    "styleguide",
-    "growcss",
-    "css",
-    "lint",
-    "stylelint"
-  ],
-  "author": {
-    "name": "Daniel Bannert",
-    "email": "d.bannert@anolilab.de"
+  "dependencies": {
+    "stylelint-config-standard": "^18.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^0.8.1",
+    "stylelint-processor-styled-components": "^1.2.2"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/growcss/stylelint-config-growcss/issues"
-  },
-  "homepage": "https://growcss.com",
   "devDependencies": {
     "ava": "^0.25.0",
     "babel-cli": "^6.26.0",
@@ -41,21 +54,12 @@
   "peerDependencies": {
     "stylelint": ">=9"
   },
-  "dependencies": {
-    "stylelint-config-standard": "^18.1.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-order": "^0.8.1",
-    "stylelint-processor-styled-components": "^1.2.2"
+  "engines": {
+    "node": "^9.0"
   },
   "ava": {
     "require": [
       "babel-register"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "@ava/stage-4",
-      "react"
     ]
   }
 }

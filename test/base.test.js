@@ -1,7 +1,7 @@
 import fs from 'fs';
 import stylelint from 'stylelint';
 import test from 'ava';
-import config from '../';
+import config from './fixtures/extendedconfig';
 import standard from 'stylelint-config-standard';
 
 const good = fs.readFileSync('./test/fixtures/Good.js', 'utf-8');

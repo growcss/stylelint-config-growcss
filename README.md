@@ -4,6 +4,9 @@
 
 ## Table of Contents
 
+1. [Stylelint](#stylelint)
+    - [Installation](#installation)
+    - [Setup](#setup)
 1. [Terminology](#terminology)
     - [Rule Declaration](#rule-declaration)
     - [Selectors](#selectors)
@@ -15,8 +18,49 @@
     - [ID Selectors](#id-selectors)
     - [JavaScript hooks](#javascript-hooks)
     - [Border](#border)
-    
-    ## Terminology
+
+## Stylelint
+
+Lint your [styled components](https://github.com/styled-components/styled-components) with [stylelint](http://stylelint.io/)!
+
+### Installation
+
+```
+npm install --save-dev stylelint-config-growcss
+
+or
+
+yarn add --dev stylelint-config-growcss
+```
+### Setup
+
+Add a `.stylelintrc` file to the root of your project:
+
+```json
+{
+  "extends": [
+    "growcss"
+  ]
+}
+```
+Then you need to run `stylelint`. Add a `lint:css` script to your `package.json` which runs `stylelint` with a glob to all of your styled components:
+
+```json
+{
+  "scripts": {
+    "lint:css": "stylelint './src/**/*.js'"
+  }
+}
+```
+> The processor ignores javascript files that don't contain any \`styled-components\`, so don't worry about being too broad as long as you restrict it to javascript (or TypeScript).
+
+Now you can lint your CSS by running the script! 🎉
+
+```
+npm run lint:css
+```
+
+## Terminology
 
 ### Rule declaration
 
